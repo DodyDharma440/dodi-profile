@@ -19,7 +19,6 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import { TimeLineData } from "../../constants/constants";
-import { useAos } from "../../hooks";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
@@ -63,23 +62,25 @@ const Timeline = () => {
     window.addEventListener("resize", handleResize);
   }, []);
 
-  useAos();
-
   return (
     <Section id="about">
       <SectionDivider />
       <br />
       <br />
-      <SectionTitle data-aos="fade-right">Tentang Saya</SectionTitle>
+      <SectionTitle>Tentang Saya</SectionTitle>
       <AboutSection>
-        <SectionText data-aos="fade-right" data-aos-delay="400">
+        <SectionText>
           Perkenalkan nama saya I Made Dodi Aditya Ari Dharma. Sering dipanggil
-          Dodi. Saya memiliki kemampuan dalam hal komputer seperti merakit
-          komputer serta install software dan dalam bidang programming saya
-          tertarik dengan React JS dan React Native.
+          Dodi. Saya sekarang bekerja di PT. Ganeshcom Mitra Solusi Digital
+          sebagai Frontend Developer. Saya juga akan mulai berkuliah di STMIK
+          Primakara dengan mengambil jurusan Teknik Informatika. Sebagai seorang
+          Frontend, saya menggunakan ReactJS untuk membangun sebuah website.
+          Selain React, saya juga mampu menggunakan NextJS, Typescript serta UI
+          Frameworks seperti MaterialUI dan CSS Framework seperti Tailwind CSS.
+          <br />
         </SectionText>
-        <div data-aos="zoom-in" data-aos-delay="800">
-          <ProfileImage src="/images/dodi.jpg" />
+        <div>
+          <ProfileImage src="/images/dodi.jpg" loading="lazy" />
         </div>
       </AboutSection>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
@@ -91,8 +92,6 @@ const Timeline = () => {
             >
               <CarouselItem
                 index={index}
-                data-aos="fade-right"
-                data-aos-delay={`${index}00`}
                 id={`carousel__item-${index}`}
                 active={activeItem}
                 onClick={(e) => handleClick(e, index)}

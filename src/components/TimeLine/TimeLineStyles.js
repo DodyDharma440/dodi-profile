@@ -169,7 +169,7 @@ export const AboutSection = styled.div`
 `;
 
 export const ProfileImage = styled.img`
-  max-width: 250px;
+  max-width: 200px;
   margin: 1rem 2rem;
   border-radius: 10px;
   @media ${(props) => props.theme.breakpoints.lg} {

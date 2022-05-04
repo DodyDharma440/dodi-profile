@@ -7,23 +7,20 @@ import {
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
-import { useAos } from "../../hooks";
 
 const Hero = () => {
-  useAos();
-
   return (
     <Section row nopadding>
       <LeftSection>
-        <SectionTitle main center data-aos="fade-right">
+        <SectionTitle main center>
           Hai Semua, <br />
           Saya Dodi Aditya
         </SectionTitle>
-        <SectionText data-aos="fade-right" data-aos-delay="200">
+        <SectionText>
           Halo! Selamat datang di website portfolio saya. Silahkan cek portfolio
           yang sudah saya kerjakan.
         </SectionText>
-        <div data-aos="fade-right" data-aos-delay="400">
+        <div>
           <Link href="#projects">
             <Button>Lihat Proyek</Button>
           </Link>

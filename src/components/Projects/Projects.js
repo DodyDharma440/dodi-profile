@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   BlogCard,
   CardInfo,
@@ -8,7 +9,7 @@ import {
   Tag,
   TagList,
   TitleContent,
-  Img,
+  ImageWrapper,
 } from "./ProjectsStyles";
 import {
   Section,
@@ -16,10 +17,27 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
-import { useAos } from "../../hooks";
+
+// import evotingImage from "../../../public/images/evoting.png";
+// import weatherImage from "../../../public/images/weather.png";
+// import moviesImage from "../../../public/images/movies-games.png";
+// import covidImage from "../../../public/images/covid.png";
+// import newsImage from "../../../public/images/news.png";
+// import foodImage from "../../../public/images/food.png";
+// import commerceImage from "../../../public/images/commerce.png";
+// import cookbookImage from "../../../public/images/cookbook.png";
 
 const Projects = () => {
-  useAos();
+  // const images = [
+  //   evotingImage,
+  //   weatherImage,
+  //   moviesImage,
+  //   covidImage,
+  //   newsImage,
+  //   foodImage,
+  //   commerceImage,
+  //   cookbookImage,
+  // ];
 
   return (
     <>
@@ -27,17 +45,19 @@ const Projects = () => {
         <SectionDivider />
         <br />
         <br />
-        <SectionTitle data-aos="fade-right">Proyek</SectionTitle>
+        <SectionTitle>Proyek</SectionTitle>
         <GridContainer>
           {projects.map(
             ({ title, description, image, tags, source, visit, id }, index) => (
-              <BlogCard
-                key={index}
-                data-aos="zoom-in"
-                data-aos-duration="800"
-                data-aos-delay={`${index}00`}
-              >
-                <Img src={image} />
+              <BlogCard key={index}>
+                <ImageWrapper>
+                  <Image
+                    src={image}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                  />
+                </ImageWrapper>
                 <TitleContent>
                   <HeaderThree title>{title}</HeaderThree>
                   <Hr />

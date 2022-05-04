@@ -13,23 +13,20 @@ import {
   ListParagraph,
   ListTitle,
 } from "./TechnologiesStyles";
-import { useAos } from "../../hooks";
 
 const Technologies = () => {
-  useAos();
-
   return (
     <Section id="tech">
       <SectionDivider />
       <br />
       <br />
-      <SectionTitle data-aos="fade-right">Teknologi</SectionTitle>
-      <SectionText data-aos="fade-right" data-aos-delay="400">
+      <SectionTitle>Teknologi</SectionTitle>
+      <SectionText>
         Adapun beberapa teknologi dalam bidang development yang sudah saya
         pelajari.
       </SectionText>
       <List>
-        <ListItem data-aos="fade-up">
+        <ListItem>
           <DiReact size="3rem" />
           <br />
           <ListContainer>
@@ -40,7 +37,7 @@ const Technologies = () => {
             </ListParagraph>
           </ListContainer>
         </ListItem>
-        <ListItem data-aos="fade-up" data-aos-delay="400">
+        <ListItem>
           <DiFirebase size="3rem" />
           <br />
           <ListContainer>
@@ -51,7 +48,7 @@ const Technologies = () => {
             </ListParagraph>
           </ListContainer>
         </ListItem>
-        <ListItem data-aos="fade-up" data-aos-delay="800">
+        <ListItem>
           <DiZend size="3rem" />
           <br />
           <ListContainer>

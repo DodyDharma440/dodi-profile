@@ -9,6 +9,15 @@ export const Img = styled.img`
   border-top-right-radius: 10px;
 `;
 
+export const ImageWrapper = styled.div`
+  position: relative;
+  height: 200px;
+  & > div {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+`;
+
 export const GridContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
